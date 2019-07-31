@@ -3,7 +3,7 @@
 	<div class="home">
 		<h1>{{title}}</h1>
 
-	  		<div class="home-site">
+			<div class="home-site">
 				<img class="home-site-image" src="/images/alsport.jpg" />
 				<div class="home-site-descr">
 					<h2 class="home-site-descr-title">AlSport.kz</h2>
@@ -85,12 +85,12 @@
 <script>
 
 export default {
-  name: 'Home',
-  data(){
-  	return {
-  		title: 'My Works'
-  	}
-  }
+	name: 'Home',
+		data(){
+			return {
+			title: 'My Works'
+		}
+	}
 }
 </script>
 
@@ -98,15 +98,15 @@ export default {
 
 .home-site {
 	display: flex;
-    background: rgb(255,255,255,0.6);
-    padding: 1rem;
-    margin: 2rem 0;
+	background: rgb(255,255,255,0.6);
+	padding: 1rem;
+	margin: 2rem 0;
 }
 
 .home-site-image,
 .home-site-image-right {
 	width: 60%;
-    margin: 1rem;
+	margin: 1rem;
 	transition: 1s;
 }
 
