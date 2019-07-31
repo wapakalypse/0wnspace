@@ -54,12 +54,11 @@ russianNewsParser.parseURL(CORS_PROXY + 'https://russian.rt.com/rss', function(e
 /*        if (i >= 15 ) { break; }; */
         var title = value.title;
         var link = value.link;
-        var content = value.content;
         var newItem = document.createElement('div');
         newItem.className = 'news-item-russian';
         newItem.innerHTML = '<div class="news-item-title-russian"><a href="' + link + '">' + title + '</a></div></div>';
         rssContent.appendChild(newItem);
-  };
+  }
 });
 
 let deutschNewsParser = new RSSParser();
@@ -73,7 +72,7 @@ deutschNewsParser.parseURL(CORS_PROXY + 'http://rss.sueddeutsche.de/rss/Toptheme
         newItem.className = 'news-item';
         newItem.innerHTML = '<div class="news-item-title"><a href="' + link + '">' + title + '</a></div><div class="news-item-content">' + content + '</div></div><hr>';
         rssContent.appendChild(newItem);
-  };
+  }
 });
 
               (function() {
