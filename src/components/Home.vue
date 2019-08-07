@@ -70,13 +70,13 @@
 			</div>
 
 			<div class="home-site">
-				<img class="home-site-image" src="/images/rightrule.jpg" />
+				<img class="home-site-image" src="/images/ownspace.jpg" />
 				<div class="home-site-descr">
 					<h2 class="home-site-descr-title">0wn.space</h2>
 					<p class="home-site-descr-resume">Сайт, облегчающий мне жизнь.</p>
 					<p><strong>Front:</strong> Vue-CLI</p>
 					<p><strong>Back:</strong> Node.js
-					<p><a href="https://alsport.kz">http://0wn.space</a></p>
+					<p><a href="http:/www./0wn.space">http://0wn.space</a></p>
 				</div>
 			</div>
 	</div>
