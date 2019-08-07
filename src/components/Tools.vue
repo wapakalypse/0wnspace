@@ -26,10 +26,10 @@
 
 			<div class="tools-convert">
 
-	    		<input class="tools-convert-dollar" type="number" v-model="number" placeholder="0 $">
-	    		<div class="tools-convert-tenge" v-model="multiple">{{multiple}} тенге</div>
+				<input class="tools-convert-dollar" type="number" v-model="number" placeholder="0 $">
+				<div class="tools-convert-tenge" v-model="multiple">{{multiple}} тенге</div>
 
-	        </div>
+			</div>
 
 		</div>
 
