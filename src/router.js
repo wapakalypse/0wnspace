@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './components/Home.vue'
+import Home from './components/Main.vue'
 import News from './components/News.vue'
 import Tools from './components/Tools.vue'
+import Works from './components/Works.vue'
 
 Vue.use(Router)
 
@@ -12,7 +13,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
+      name: 'Main',
       component: Home
     },
     {
@@ -24,6 +25,11 @@ export default new Router({
       path: '/tools',
       name: 'Tools',
       component: Tools
+    },
+    {
+      path: '/works',
+      name: 'My Works',
+      component: Works
     }
   ]
 })

@@ -9,10 +9,13 @@
                 <img class="header-menu-logo" src="/images/wapa-logo.png" />
 
                 <ul class="header-menu-list">
+                    <li><router-link to="/">About me</router-link></li>
+                    <li><router-link to="/works">My Works</router-link></li>            
                     <li><router-link to="/news">News</router-link></li>
                     <li><router-link to="/tools">Tools</router-link></li>
-                    <li><router-link to="/">About me</router-link></li>
                 </ul>
+
+            <div class="copyright">Created by Wapakalypse by Vue-CLI.</div>
 
             </div>
 
@@ -20,13 +23,19 @@
 
         </div>
 
-        <div class="content">
+        <div class="main-content">
 
-            <router-view/>
+            <transition name="fade" mode="out-in">
+                <router-view/>
+            </transition>
 
         </div>
 
-        <div class="copyright">Created by Wapakalypse by Vue-CLI.</div>
+        <div class="footer">
+
+
+
+        </div>
 
     </div>
 
@@ -41,34 +50,53 @@
 <style>
 
 @font-face {
-    font-family:'Abel';
-    src: local('Abel'),
-    url(/fonts/Abel-Regular.ttf);
+    font-family:'Roboto';
+    src: local('Roboto'),
+    url(/fonts/Roboto.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'RobotoLight';
+    src: local('RobotoLight'),
+    url(/fonts/Robotolight.ttf);
     font-weight: normal;
     font-style: normal;
 }
 
 * {
-    font-family: 'Abel';
+    font-family:'RobotoLight';
     margin: 0;
     border: 0;
     padding: 0;
 }
 
 body {
-    background-image: url(/images/fon.jpg);
+    background: radial-gradient(#92e9ff, #006ebb);
+    background-size: 100%;
+    background-attachment: fixed;
 }
 
 h1 {
-  font-size: 36pt;
-  font-weight: 300;
-  margin: 3rem 0;
+    font-family:'Roboto';
+    font-size: 40pt;
+    font-weight: 300;
+    margin: 3rem 0;
+    color: #e4e4e4;
+    text-align: center;
+    text-shadow: 1px 1px 10px #014398;
 }
 
 h2 {
-  font-size: 28pt;
-  font-weight: 300;
-  margin: 1rem 0;
+    font-family:'Roboto';
+    font-size: 28pt;
+    font-weight: 300;
+    margin: 1rem 0;
+}
+
+strong {
+    font-family:'Roboto';
 }
 
 a {
@@ -77,14 +105,14 @@ a {
 
 a .fa {
     font-size: 40pt;
-    color: #fcff71;
+    color: #3568aa;
     padding: 20px;
-  transition: 0.5s;
+    transition: 0.5s;
 }
 
 a .fa:hover {
-    color: #fff;
-  transition: 0.5s;
+    color: #6997d2;
+    transition: 0.5s;
 }
 
 hr {
@@ -92,21 +120,24 @@ hr {
     height: 1px;
     margin: 1em 0 1.5em 0;
 }
+#app {
+
+}
 
 .header {
-    position: absolute;
+    position: fixed;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.8);
     width: 100%;
-    height: 15px;
-    transition: 1s;
-    text-align: left;
+    height: 40px;
+    border-radius: 0 0 50% 50%;
+    transition: 1s .3s;
+    z-index: 999;
 }
 
 .header:hover {
-    height: 75px;
+    height: 140px;
     transition: 1s;
 }
 
@@ -114,7 +145,10 @@ hr {
     width: 100%;
     opacity: 0;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0 2rem;
+    transition: .5s .3s;
 }
 
 .header-menu-logo {
@@ -125,7 +159,7 @@ hr {
 .header-menu-list {
     display: flex;
     list-style-type: none;
-    width: 100%;
+    width: auto;
     justify-content: flex-end;
     align-items: center;
 }
@@ -143,40 +177,52 @@ hr {
 }
 
 .header:hover .header-menu {
-    left: 0;
-    transition: all 0s 0.1s;
-}
-
-.header:hover .header-menu {
     opacity: 1;
-    transition: all 0.5s 0.5s;
+    transition: .5s .5s;
 }
 
 .toggle {
     position: absolute;
-    padding: 0 2%;
+    padding: .5% 2%;
     opacity: 1;
-    transition: 0.5s;
     color: #3568aa;
+    font-size: 15pt;
+    transition: .5s .5s;
 }
 
 .header:hover .toggle {
     opacity: 0;
+    transition: .5s;
 }
 
-.content {
-    width: 1200px;
+.main-content {
+    width: 900px;
     margin: 0 auto;
-    padding: 3rem 0 0 0;
+    padding: 7% 0 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
+.content {
+    width: 100%;
+}
+
+.footer {
 }
 
 .copyright {
-    text-align: right;
-    font-size: 14pt;
-    padding: 1rem;
+    position: absolute;
+    right: 5px;
+    padding: 1%;
+    color: #999;
 }
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .7s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
 </style>

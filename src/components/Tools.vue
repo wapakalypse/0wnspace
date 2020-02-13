@@ -7,6 +7,8 @@
 
 			<div class="tools-todo">
 
+				<h2>Todo List</h2>
+
 				<form class="tools-todo-form" v-on:submit='addTask'>
 					<input type="text" class="tools-todo-form-control" v-model='tasks.name'>
 					<input type="submit" class="tools-todo-form-submit" value="Add">
@@ -25,6 +27,8 @@
 			</div>
 
 			<div class="tools-convert">
+
+				<h2>Converter</h2>
 
 				<input class="tools-convert-dollar" type="number" v-model="number" placeholder="0 $">
 				<div class="tools-convert-tenge" v-model="multiple">{{multiple}} тенге</div>
@@ -77,14 +81,16 @@ export default {
 
 .tools-content {
 	display: flex;
+	align-items: flex-start;
 }
 
 .tools-todo,
 .tools-convert {
-	width: 50%;
-	background: rgba(255, 255, 255, 0.9);
-	margin: 1rem;
-	padding: 1rem;
+	width: 40%;
+	background: radial-gradient(rgb(255,255,255,0.7), rgb(255,255,255,0.3));
+	margin: 1%;
+	padding: 1% 5%;
+    border-radius: 50%;
 	font-size: 14pt;
 }
 
@@ -102,22 +108,22 @@ export default {
 }
 
 .tools-todo-form-control {
-	width: 75%;
+	width: 80%;
 	border: 1px solid #96c1f5;
-	border-radius: 3px;
+	border-radius: 50%;
 	font-size: 14pt;
-	margin: 1rem 0;
-	padding: .5rem;
+    margin: 3%;
+    padding: 5% 10%;
 }
 
 .tools-todo-form-submit {
 	width: 20%;
 	margin: 1rem 0;
-	padding: .5rem;
+    padding: 5%;
 	font-size: 15pt;
 	background: #96c1f5;
 	color: #fff;
-	border-radius: 3px;
+	border-radius: 50%;
 }
 
 .tools-todo-list {
@@ -137,15 +143,17 @@ export default {
 
 .tools-convert-dollar,
 .tools-convert-tenge {
-	margin: 1rem;
-	padding: .5rem;
+	margin: 3%;
+	padding: 5%;
 }
 
 .tools-convert-dollar {
 	border: 1px solid #96c1f5;
 	border-radius: 3px;
 	font-size: 14pt;
-   }
+	border-radius: 50%;
+	text-align: center;
+}
 
 .tools-convert-tenge {
 	font-size: 20pt;
