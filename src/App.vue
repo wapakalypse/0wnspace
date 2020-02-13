@@ -15,7 +15,7 @@
                     <li><router-link to="/tools">Tools</router-link></li>
                 </ul>
 
-            <div class="copyright">Created by Wapakalypse by Vue-CLI.</div>
+            <div class="copyright">Created by Wapakalypse on Vue-CLI.</div>
 
             </div>
 
